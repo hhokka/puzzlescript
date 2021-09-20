@@ -1,2 +1,47 @@
-Puzzlescript code here
-testi commit
+title Zombie Game
+author Mikael Lenander, Tomi Luomanpää, Hans Hokka
+debug
+
+========
+OBJECTS
+========
+
+Background
+
+Player
+
+Zombie
+
+Wall
+
+Hole
+
+=======
+LEGEND
+=======
+
+. = Background
+P = Player
+Z = Zombie
+# = Wall
+O = Hole
+
+=======
+SOUNDS
+=======
+
+================
+COLLISIONLAYERS
+================
+
+======
+RULES
+======
+
+==============
+WINCONDITIONS
+==============
+
+=======
+LEVELS
+=======
