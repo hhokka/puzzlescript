@@ -1,304 +1,117 @@
+title Zombie Game
+author Mikael Lenander, Tomi Luomanpää, Hans Hokka
+debug
+require_player_movement
 
-
-49
-
-​
-
-50
-
-=======
-
-51
-
-LEGEND
-
-52
-
-=======
-
-53
-
-​
-
-54
-
-. = Background
-
-55
-
-P = Player
-
-56
-
-Z = Zombie
-
-57
-
-# = Wall
-
-58
-
-O = Hole
-
-59
-
-​
-
-60
-
-=======
-
-61
-
-SOUNDS
-
-62
-
-=======
-
-63
-
-SFX0 10882109
-
-64
-
-SFX1 42907902
-
-65
-
-SFX2 18432303
-
-66
-
-Player move 80638707
-
-67
-
-Player cantmove 38267907
-
-68
-
-​
-
-69
-
-================
-
-70
-
-COLLISIONLAYERS
-
-71
-
-================
-
-72
+========
+OBJECTS
+========
 
 Background
+LIGHTGRAY GRAY
+11111
+11110
+01111
+11011
+11111
 
-73
-
-Hole
-
-74
-
-Player, Wall
-
-75
+Player
+BLACK RED BLUE WHITE
+.000.
+.131.
+22222
+.333.
+.3.3.
 
 Zombie
+BLACK
+.000.
+.000.
+00000
+.000.
+.0.0.
 
-76
+Wall
+BLACK DARKGREY
+01000
+11111
+00010
+11111
+01000
 
+Hole
+DARKBLUE BLUE
+00000
+01110
+01.10
+01110
+00000
+
+=======
+LEGEND
+=======
+
+. = Background
+P = Player
+Z = Zombie
+# = Wall
+O = Hole
+
+=======
+SOUNDS
+=======
+SFX0 10882109
+SFX1 42907902
+SFX2 18432303
+Player move 80638707
+Player cantmove 38267907
+
+================
+COLLISIONLAYERS
+================
+Background
+Hole
+Player, Wall
+Zombie
 ======
-
-77
-
 RULES
-
-78
-
 ======
-
-79
-
 [ Zombie | ... | Player] -> [ > Zombie | ... | Player] SFX0
-
-80
-
 [ Player | Zombie ] -> SFX1 restart
-
-81
-
 [Player Zombie] -> SFX1 restart
-
-82
-
 late [ Zombie Hole ] -> [ Hole ] SFX2
 
-83
-
-​
-
-84
-
 ==============
-
-85
-
 WINCONDITIONS
-
-86
-
 ==============
-
-87
-
 All Zombie On Hole
-
-88
-
 =======
-
-89
-
 LEVELS
-
-90
-
 =======
-
-91
-
 #########
-
-92
-
 #Z......#
-
-93
-
 #.......#
-
-94
-
 #...O...#
-
-95
-
 #.....P.#
-
-96
-
 #.......#
-
-97
-
 #########
-
-98
-
-​
-
-99
 
 message congrats: level 2!
 
-100
-
-​
-
-101
-
 #########
-
-102
-
 #Z.....P#
-
-103
-
 #Z.....##
-
-104
-
 #.....###
-
-105
-
 #...O..##
-
-106
-
 #.......#
-
-107
-
 #########
-
-108
-
-​
-
-109
 
 message congrats: level 3!
 
-110
-
-​
-
-111
-
 #########
-
-112
-
 #Z.....P#
-
-113
-
 #Z.....##
-
-114
-
 #...O...#
-
-115
-
 #......##
-
-116
-
 #Z......#
-
-117
-
 #########
-
-118
-
-​
-
-   PuzzleScript - SAVE* - -
--
-- RUN - REBUILD - LEVEL EDITOR - EXPORT - SHARE - DOCS - FORUM
-
-
-=================================
-
-Rule Assembly : (10 rules)
-===========
-(79) UP [ zombie | ... | player ] -> [ up zombie | ... | player ] sfx0
-(79) DOWN [ zombie | ... | player ] -> [ down zombie | ... | player ] sfx0
-(79) LEFT [ zombie | ... | player ] -> [ left zombie | ... | player ] sfx0
-(79) RIGHT [ zombie | ... | player ] -> [ right zombie | ... | player ] sfx0
-(80) DOWN [ zombie | player ] -> sfx1restart
-(80) DOWN [ player | zombie ] -> sfx1restart
-(80) RIGHT [ zombie | player ] -> sfx1restart
-(80) RIGHT [ player | zombie ] -> sfx1restart
-(81) DOWN [ player zombie ] -> sfx1restart
-LATE (82) DOWN [ zombie hole ] -> [ hole ] sfx2
-===========
-
-Successful Compilation, generated 10 instructions.
