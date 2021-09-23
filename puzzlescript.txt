@@ -73,7 +73,7 @@ Zombie
 RULES
 ======
 [ Zombie | ... | Player ] -> [ > Zombie | ... | Player ] SFX0
-[ Player Zombie ] -> [ Zombie ] restart
+[ Player | Zombie ] -> [ Zombie ] restart
 [ Zombie Hole ] -> [ Hole ]
 
 ==============
