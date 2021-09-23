@@ -102,7 +102,7 @@ message congrats: level 2!
 #.......#
 #########
 
-essage congrats: level 3!
+message congrats: level 3!
 
 #########
 #Z.....P#
