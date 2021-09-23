@@ -75,7 +75,7 @@ RULES
 [ Zombie | ... | Player ] -> [ > Zombie | ... | Player ] SFX0
 [ Player | Zombie ] -> restart
 [Player Zombie] -> restart
-[ Zombie Hole ] -> [ Hole ]
+late [ Zombie Hole ] -> [ Hole ]
 
 ==============
 WINCONDITIONS
@@ -98,6 +98,6 @@ message congrats: level 2!
 #Z.....P#
 #Z.....##
 #.....###
-#......##
-#...O...#
+#...O..##
+#.......#
 #########
