@@ -62,6 +62,7 @@ SOUNDS
 SFX0 10882109
 SFX1 42907902
 Player move 80638707
+Player cantmove 38267907
 
 ================
 COLLISIONLAYERS
@@ -108,7 +109,7 @@ message congrats: level 3!
 #########
 #Z.....P#
 #Z.....##
-#.......#
-#...O..##
+#...O...#
+#......##
 #Z......#
 #########
