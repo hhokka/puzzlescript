@@ -59,23 +59,26 @@ O = Hole
 =======
 SOUNDS
 =======
-SFX0 58730503
+SFX0 10882109
 
 ================
 COLLISIONLAYERS
 ================
 Background
 Hole
-Player, Wall, Zombie
+Player, Wall
+Zombie
 ======
 RULES
 ======
 [ Zombie | ... | Player ] -> [ > Zombie | ... | Player ] SFX0
+[ Player Zombie ] -> [ Zombie ] restart
+[ Zombie Hole ] -> [ Hole ]
 
 ==============
 WINCONDITIONS
 ==============
-
+All Zombie On Hole
 =======
 LEVELS
 =======
@@ -85,4 +88,14 @@ LEVELS
 #...O...#
 #.....P.#
 #.......#
+#########
+
+message congrats: level 2!
+
+#########
+#Z.....P#
+#Z.....##
+#.....###
+#......##
+#...O...#
 #########
