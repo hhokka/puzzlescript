@@ -7,14 +7,44 @@ OBJECTS
 ========
 
 Background
+LIGHTGRAY GRAY
+11111
+11110
+01111
+11011
+11111
 
 Player
+BLACK RED BLUE WHITE
+.000.
+.131.
+22222
+.333.
+.3.3.
 
 Zombie
+BLACK
+.000.
+.000.
+00000
+.000.
+.0.0.
 
 Wall
+BLACK DARKGREY
+01000
+11111
+00010
+11111
+01000
 
 Hole
+DARKBLUE BLUE
+00000
+01110
+01.10
+01110
+00000
 
 =======
 LEGEND
@@ -29,14 +59,18 @@ O = Hole
 =======
 SOUNDS
 =======
+SFX0 58730503
 
 ================
 COLLISIONLAYERS
 ================
-
+Background
+Hole
+Player, Wall, Zombie
 ======
 RULES
 ======
+[ Zombie | ... | Player ] -> [ > Zombie | ... | Player ] SFX0
 
 ==============
 WINCONDITIONS
@@ -45,3 +79,10 @@ WINCONDITIONS
 =======
 LEVELS
 =======
+#########
+#Z......#
+#.......#
+#...O...#
+#.....P.#
+#.......#
+#########
