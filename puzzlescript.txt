@@ -61,6 +61,7 @@ SOUNDS
 =======
 SFX0 10882109
 Player move 80638707
+Player cantmove 38267907
 
 ================
 COLLISIONLAYERS
