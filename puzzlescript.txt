@@ -60,6 +60,7 @@ O = Hole
 SOUNDS
 =======
 SFX0 10882109
+Player move 80638707
 
 ================
 COLLISIONLAYERS
