@@ -60,6 +60,7 @@ O = Hole
 SOUNDS
 =======
 SFX0 10882109
+SFX1 42907902
 Player move 80638707
 
 ================
@@ -73,8 +74,8 @@ Zombie
 RULES
 ======
 [ Zombie | ... | Player ] -> [ > Zombie | ... | Player ] SFX0
-[ Player | Zombie ] -> restart
-[Player Zombie] -> restart
+[ Player | Zombie ] -> SFX1 restart
+[Player Zombie] -> SFX1 restart
 late [ Zombie Hole ] -> [ Hole ]
 
 ==============
@@ -102,7 +103,7 @@ message congrats: level 2!
 #.......#
 #########
 
-essage congrats: level 3!
+message congrats: level 3!
 
 #########
 #Z.....P#
